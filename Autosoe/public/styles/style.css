@@ -33,6 +33,7 @@ body {
     align-items: center;
     justify-content: center;
     height: 100%;
+    transform: translate(20px, 18px);
 }
 
 .search-input {
@@ -759,7 +760,18 @@ p {
 
 
 
+.site-logo{
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
 
+.site-logo img{
+    width: 170px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
 
 
 
