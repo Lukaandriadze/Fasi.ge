@@ -1,0 +1,905 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.site-logo img {
+    width: 200px;
+    height: auto;
+    padding: 20px 0px;
+}
+
+
+.category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.category-hover,
+.category-click {
+    display: flex;
+    align-items: center;
+}
+
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.search-button {
+    padding: 10px 15px;
+    border: none;
+    color:black;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background: #ff8c00;
+}
+
+
+.cart {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.help-center,
+.heart-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.headphone i,
+.heart i,
+.cart i {
+    font-size: 20px;
+}
+.heart i,.cart i{
+    margin-top: -10px;
+}
+
+
+.help-center p,
+.cart p {
+    color:black;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+.headphone,
+.heart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:black;
+}
+
+.cart{
+    color:black;
+}
+.cart .row {
+    align-items: center;
+}
+
+p {
+    margin: 0;
+}
+
+
+
+
+.dropdown-menu {
+  background-color: #fff !important;
+  border: 1px solid #ddd;
+}
+
+.dropdown-item {
+  color: #000 !important;
+}
+
+.dropdown-item:hover {
+  background-color: #f2f2f2 !important;
+  color: #000 !important;
+}
+
+.dropdown-item.active {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
+
+.dropdown-menu {
+  background-color: #fff !important;
+  border: 1px solid #ddd;
+}
+
+.dropdown-menu .dropdown-item {
+  color: #000 !important;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: white !important;
+  color: #0d6efd !important;
+}
+
+.dropdown-menu .dropdown-item.active {
+  background-color: white !important;
+}
+
+
+
+
+
+
+.search-bar-scraping{
+    background-color: #212121;
+    padding:20px;
+}
+.main-search{
+    width:100px;
+    height: auto;
+    background-color: #0d6efd;
+    color:white;
+}
+
+
+
+
+
+
+.fasebis_shedareba {
+    background: linear-gradient(135deg, #eef2ff, #dbeafe);
+    margin-top: 80px;
+    overflow: hidden;
+}
+
+.text-side h1 {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+    max-width: 600px;
+    margin-left:50px;
+
+}
+
+.text-side p {
+    font-size: 18px;
+    color: #64748b;
+    margin-bottom: 30px;
+    margin-left:50px;
+    max-width: 600px;
+}
+
+.search-button {
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    border: none;
+    border-radius: 12px;
+    color: white;
+    font-size: 16px;
+    margin-left:50px;
+
+}
+
+
+.img-side {
+    position: relative;
+}
+.product-img {
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+    transform: scale(1.05);
+}
+.shop-logo{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+.shops-list{
+    background-color: #212121;
+    padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.items-three-boxes {
+    margin-top: 40px;
+}
+
+.items-three-boxes .row {
+    margin: 0;
+}
+
+.box {
+    position: relative;
+    color: white;
+    padding: 20px;
+    border-radius: 12px;
+    background-size: cover;
+    background-position: center;
+}
+.box h1,.box p,.box button {
+    position: relative;
+    z-index: 2;
+}
+
+.col-4 .box {
+    height: 300px;
+}
+
+.right-boxes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.right-boxes .box {
+    height: 145px;
+}
+
+.mobile {
+    background-image: url(../images/yellow.png);
+}
+
+.laptop {
+    background-image: url(../images/blue.png);
+}
+
+.clothes {
+    background-image: url(../images/black.png);
+}
+
+.accessories {
+    background-image: url(../images/purple.png);
+}
+
+.box h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.box p {
+    font-size: 13px;
+    opacity: 0.9;
+}
+
+.box button {
+    margin-top: 8px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 8px;
+    background: white;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.items-three-boxes .box img {
+    transition: transform 0.3s ease;
+}
+
+.mobile:hover,.laptop:hover,.clothes:hover,.accessories:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.items-box{
+    margin-top:20px;
+    width:270px;
+    height:350px;
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    color:white;
+}
+
+.iphone-items-box{
+    width:100%;
+    height:100%;
+    background-image:url(../images/iphone.jpg);
+    background-size:cover;
+    background-position:center;
+    transition:0.4s ease;
+    position:absolute;
+}
+
+.items-box:hover .iphone-items-box{
+    transform:scale(1.08);
+}
+
+.items-box h1,
+.items-box a,
+.items-box ul{
+    position:absolute;
+    z-index:2;
+}
+
+.items-box h1{
+    top:5%;
+    left:20px;
+    font-size:32px;
+}
+
+.items-box ul{
+    top:22%;
+    left:20px;
+    list-style:none;
+    padding:0;
+}
+
+.items-box ul li{
+    margin-top:8px;
+    font-size:15px;
+}
+
+.items-box a{
+    bottom:25px;
+    left:20px;
+    color:white;
+    text-decoration:none;
+}
+
+
+.item-and-items-list-box{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    height:350px;
+    margin-top:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s ease;
+    cursor:pointer;
+}
+
+.product-img-items{
+    width:100%;
+    height:180px;
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    transition:0.4s ease;
+}
+
+.box-1 .product-img-items{
+    background-image:url(../images/iphone17new.png);
+}
+.box-1:hover .product-img-items{
+    background-image:url(../images/iphone17back.jpg);
+}
+.box-2 .product-img-items{
+    background-image:url(../images/iphone16.jpg);
+}
+.box-2:hover .product-img-items{
+    background-image:url(../images/iphone16back.jpg);
+}
+.box-3 .product-img-items{
+    background-image:url(../images/iphone15.jpg);
+}
+.box-3:hover .product-img-items{
+    background-image:url(../images/iphone15back.jpg);
+}
+.box-4 .product-img-items{
+    background-image:url(../images/iphone14.jpg);
+}
+.box-4:hover .product-img-items{
+    background-image:url(../images/iphone14back.jpg);
+}
+.box-5 .product-img-items{
+    background-image:url(../images/iphone13.jpg);
+}
+.box-5:hover .product-img-items{
+    background-image:url(../images/iphone13back.jpg);
+}
+.item-and-items-list-box h1{
+    font-size:28px;
+    margin-top:10px;
+}
+.item-and-items-list-box h2{
+    font-size:18px;
+}
+.item-and-items-list-box p{
+    color:gray;
+    font-size:14px;
+}
+.stars{
+    margin-top:10px;
+    color:gold;
+}
+
+
+
+
+
+
+
+.samsung-items-box{
+    width:100%;
+    height:100%;
+    background-image:url(../images/samsung.png);
+    background-size:cover;
+    background-position:center;
+    transition:0.4s ease;
+    position:absolute;
+}
+
+.items-box:hover .samsung-items-box{
+    transform:scale(1.08);
+}
+
+.samsung-box-1 .product-img-items{
+    background-image:url(../images/G25.jpg);
+}
+.samsung-box-1:hover .product-img-items{
+    background-image:url(../images/G25back.jpg);
+}
+.samsung-box-2 .product-img-items{
+    background-image:url(../images/S24.jpg);
+}
+.samsung-box-2:hover .product-img-items{
+    background-image:url(../images/S24back.jpg);
+}
+.samsung-box-3 .product-img-items{
+    background-image:url(../images/S23.webp);
+}
+.samsung-box-3:hover .product-img-items{
+    background-image:url(../images/S23back.webp);
+}
+.samsung-box-4 .product-img-items{
+    background-image:url(../images/S22.webp);
+}
+.samsung-box-4:hover .product-img-items{
+    background-image:url(../images/S22back.webp);
+}
+.samsung-box-5 .product-img-items{
+    background-image:url(../images/S21.webp);
+}
+.samsung-box-5:hover .product-img-items{
+    background-image:url(../images/S21back.webp);
+}
+
+
+
+
+
+
+
+.items-types-three{
+    margin-top: 50px;
+}
+
+.items-type-three-box{
+    width: 100%;
+    height: 250px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.items-type-three-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.4s ease;
+}
+
+.items-type-three-box:hover img{
+    transform: scale(1.08);
+}
+
+
+
+.items-type-three-box h1,
+.items-type-three-box p,
+.items-type-three-box a{
+    position: absolute;
+    z-index: 2;
+    color: white;
+}
+
+.first h1{
+    top: 30px;
+    right: 60px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.first p{
+    top: 80px;
+    right: 95px;
+    max-width: 20%;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.first a{
+    bottom: 85px;
+    right: 70px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.items-type-three-box a:hover{
+    transform: translateX(5px);
+}
+
+.Second h1{
+    top: 30px;
+    left: 55px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.Second p{
+    top: 80px;
+    left: 65px;
+    max-width: 20%;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.Second a{
+    bottom: 85px;
+    left: 70px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+.Third h1{
+    top: 30px;
+    right: 60px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.Third p{
+    top: 80px;
+    right: 5px;
+    max-width: 40%;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.Third a{
+    bottom: 85px;
+    right: 80px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fun-and-food{
+    margin-top: 60px;
+}
+
+.fun-and-food-box{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.fun-and-food-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.4s ease;
+}
+
+.fun-and-food-box:hover img{
+    transform: scale(1.08);
+}
+
+.fun-and-food-box::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.15)
+    );
+    z-index: 1;
+}
+
+.fun-and-food-box h1{
+    position: absolute;
+    top: 30px;
+    left: 25px;
+    z-index: 2;
+    color: #FFC122;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.fun-and-food-box ul{
+    position: absolute;
+    top: 110px;
+    left: 25px;
+    z-index: 2;
+    padding-left: 20px;
+}
+
+.fun-and-food-box li{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.fun-and-food-box li::marker{
+    color: #FFC122;
+}
+
+.fun-and-food-box a{
+    position: absolute;
+    bottom: 35px;
+    left: 25px;
+    z-index: 2;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fun-and-food-box a i{
+    color: #FFC122;
+    margin-left: 8px;
+}
+
+.fun-list{
+    padding-left: 18px;
+}
+
+.product-card{
+    background: #f1f5f9;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    height: 150px;
+    display: flex;
+    align-items: center;
+}
+
+.img-side{
+    width: 40%;
+    height: 100%;
+}
+
+.img-side img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-side{
+    width: 60%;
+    padding: 7px;
+}
+
+.info-side h3{
+    color: #FFC122;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.info-side h2{
+    font-size: 18px;
+    color: #111827;
+    font-weight: 700;
+    margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.site-about{
+    margin-top:100px;
+}
+.site-about-img img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.site-about-text h1{
+    font-size:64px;
+    color:#212121;
+    font-weight: 700;
+}
+.site-about-text h3{
+    margin-top:40px;
+    font-size:25px;
+    color:#212121;
+    font-weight: 700;
+}
+.site-about-text h2{
+    margin-top:30px;
+    font-size:30px;
+    color:#212121;
+}
+.site-about-text i{
+    width:80px;
+    height:80px;
+    background-color:#212121;
+    border-radius:50%;
+    color:white;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    margin-right:20px;
+    vertical-align:middle;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    margin-top:100px;
+    background:#111111;
+    padding:80px 0 30px;
+    color:white;
+}
+
+.footer-logo img{
+    width:180px;
+    border-radius:15px;
+}
+
+.footer-logo p{
+    margin-top:25px;
+    color:#bdbdbd;
+    font-size:17px;
+}
+
+.footer-social{
+    display:flex;
+    flex-direction: row;
+    gap:15px;
+
+    margin-top:25px;
+}
+
+.footer-social a{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#1f1f1f;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s ease;
+}
+
+.footer-social a:hover{
+    background:#FFC122;
+    color:#111111;
+    transform:translateY(-5px);
+}
+
+.footer-links{
+    display:flex;
+    flex-direction:column;
+}
+
+.footer-links h2,
+.footer-text h2{
+    font-size:26px;
+    margin-bottom:25px;
+    color:white;
+}
+
+.footer-links a{
+    color:#bdbdbd;
+    margin-bottom:15px;
+    transition:0.3s ease;
+    font-size:17px;
+}
+
+.footer-links a:hover{
+    color:#FFC122;
+    transform:translateX(5px);
+    text-decoration: none;
+}
+
+.footer-text p{
+    color:#bdbdbd;
+    font-size:17px;
+    margin-bottom:25px;
+}

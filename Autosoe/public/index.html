@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoSoe</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <div class="container-fluid header">
+    <div class="row">
+      <div class="col-5">
+        <div class="row">
+          <div class="col-6 site-logo">
+          <img src="./images/logo.jpg"  alt="">
+          </div>
+          <div class="col-6 category">
+            <div class="row">
+              <div class="col-6 category-hover">
+                <div class="category-hover-dropdown">
+                  <div class="dropdown">
+                    <button style="background-color: white;color:black;border: none;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Shop by Category
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu">
+                      <li><a class="dropdown-item active" href="#"><span>მობილურები<i class="fa-solid fa-arrow-right"></i></span></a></li>
+                      <li><a class="dropdown-item" href="#"><span>ლეპტოპები | IT<i class="fa-solid fa-arrow-right"></i></span></a></li>
+                      <li><a class="dropdown-item" href="#"><span></span>Gaming<i class="fa-solid fa-arrow-right"></i></span></a></li>
+                      <li><a class="dropdown-item" href="#"><span>TV | მონიტორები<i class="fa-solid fa-arrow-right"></i></span></a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-6 category-click">
+                <div class="category-click-dropdown">
+                  <div class="dropdown">
+                    <button style="background-color: white;color:black;border: none;"class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      All categories
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-dark">
+                      <li><a class="dropdown-item active" href="#">მომსახურება</a></li>
+                      <li><a class="dropdown-item" href="#">გაქირავება</a></li>
+                      <li><a class="dropdown-item" href="#">სახლი და ბაღი</a></li>
+                      <li><a class="dropdown-item" href="#">საოჯახო ტექნიკა</a></li>
+                      <li><a class="dropdown-item" href="#">ტექნიკა</a></li>
+                      <li><a class="dropdown-item" href="#">ნადირობა და თევზაობა</a></li>
+                      <li><a class="dropdown-item" href="#">საბავშვო</a></li>
+                      <li><a class="dropdown-item" href="#">მშენებლობა და რემონტი</a></li>
+                      <li><a class="dropdown-item" href="#">სოფლის მეურნეობა</a></li>
+                      <li><a class="dropdown-item" href="#">ცხოველები</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+      <form id="searchForm">
+        <div class="search">
+          <input type="text" class="search-input" placeholder="Search for products, brands and more">
+          <button class="search-button" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </form>
+      </div>
+      <div class="col-3">
+        <div class="cart">
+          <div class="row">
+            <div class="col-6 help-center">
+              <div class="row">
+                <div class="col-6 headphone">
+                  <i class="fa-regular fa-headphones"></i>
+                </div>
+                <div class="col-6">
+                  <p>Help Center</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 heart-cart">
+              <div class="row">
+                <div class="col-6 heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="col-6 cart">
+                  <div class="row">
+                    <div class="col-6"><i class="fa-solid fa-cart-arrow-down"></i></div>
+                    <div class="col-6">
+                      <div class="row">
+                        <p>Shopping Cart</p>
+                        <p>$0.00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid categories">
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          <div class="col-2"><p>HOME</p></div>
+          <div class="col-2"><p>SHOP</p></div>
+          <div class="col-2"><p>CATEGORY</p></div>
+          <div class="col-2"><p>YOUR RECENTLY VIEWED</p></div>
+          <div class="col-2"><p>PAGES</p></div>
+          <div class="col-2"><p>BLOG</p></div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-2">
+        <div class="row">
+          <div class="col-6 EUR">
+              <div class="EUR-hover">
+                <div class="EUR-dropdown">
+                  <div class="dropdown">
+                    <button style="background-color: white;color:black;border: none;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EUR
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu">
+                      <li><a class="dropdown-item active" href="#">EUR€</a></li>
+                      <li><a class="dropdown-item" href="#">USD$</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-6 USD">
+              <div class="USD-hover">
+                <div class="USD-dropdown">
+                  <div class="dropdown">
+                    <button style="background-color: white;color:black;border: none;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EUR
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu">
+                      <li><a class="dropdown-item active" href="#">ENGLISH</a></li>
+                      <li><a class="dropdown-item" href="#">GEORGIAN</a></li>
+                      <li><a class="dropdown-item" href="#">RUSSIAN</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid search-bar-scraping">
+  </div>
+<div class="fasebis_shedareba">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 text-side">
+        <h1>იპოვე საუკეთესო ფასი ერთ სივრცეში</h1>
+        <p>შეადარეთ ქართული მაღაზიების ფასები და მიიღე საუკეთესო შეთავაზებები</p>
+
+        <a href="/shop">
+          <button class="search-button">
+            <span>
+              დაწყება
+              <i class="fa-solid fa-arrow-right"></i>
+            </span>
+          </button>
+        </a>
+      </div>
+      <div class="col-6 img-side">
+        <img class="product-img" src="./images/products_img.png" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="shops-list">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <a href="https://alta.ge">
+          <img src="./images/alta.png" alt="Alta" class="img-fluid shop-logo">
+        </a>
+      </div>
+
+      <div class="col-2">
+        <a href="https://be.ge">
+          <img src="./images/be.ge.png" alt="Be.ge" class="img-fluid shop-logo">
+        </a>
+      </div>
+
+      <div class="col-2">
+        <a href="https://extra.ge">
+          <img src="./images/extra.ge.png" alt="Extra" class="img-fluid shop-logo">
+        </a>
+      </div>
+
+      <div class="col-2">
+        <a href="https://kontact.ge">
+          <img src="./images/kontact.png" alt="Kontact" class="img-fluid shop-logo">
+        </a>
+      </div>
+
+      <div class="col-2">
+        <a href="https://ee.ge">
+          <img src="./images/elit eleqtronics.png" alt="ElitElectronics" class="img-fluid shop-logo">
+        </a>
+      </div>
+
+      <div class="col-2">
+        <a href="https://zoommer.ge">
+          <img src="./images/zoommer.png" alt="Zoommer" class="img-fluid shop-logo">
+        </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+<div class="items-three-boxes">
+  <div class="container-fluid">
+    <div class="row">
+
+      <div class="col-4">
+        <div class="box mobile">
+          <h1>მობილურები</h1>
+          <p>iphone, samsung</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="box laptop">
+          <h1>ლეპტოპები</h1>
+          <p>acer, dell, hp</p>
+          <button>Shop Now</button>
+        </div>
+      </div>
+
+      <div class="col-4 right-boxes">
+
+        <div class="box clothes">
+          <h1>ტელევიზორები</h1>
+          <p>samsung, lg, philips</p>
+          <button>Shop Now</button>
+        </div>
+
+        <div class="box accessories">
+          <h1>აქსესუარები</h1>
+          <p>მობილურებისთვის, ლეპტოპებისთვის</p>
+          <button>Shop Now</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+<div style="margin-top:50px;" class="item-and-items-list iphone-items">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <div class="items-box">
+          <div class="iphone-items-box"></div>
+
+          <h1>iPhone</h1>
+
+          <ul>
+            <li>iPhone 15</li>
+            <li>iPhone 16</li>
+            <li>iPhone 17</li>
+          </ul>
+
+          <a href="#">
+            <span>View All <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box box-1">
+          <div class="product-img-items"></div>
+
+          <h1>4,729.99₾</h1>
+          <h2>Apple iPhone 17 Pro Max 12GB/256GB - Cosmic Orange</h2>
+          <p>მობილური ტელეფონი</p>
+          <div class="stars">
+            ★★★★☆
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box box-2">
+          <div class="product-img-items"></div>
+
+          <h1>2459.99₾</h1>
+          <h2>Apple iPhone 16 128GB Black</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box box-3">
+          <div class="product-img-items"></div>
+
+          <h1>2329.99₾</h1>
+          <h2>Apple iPhone 15 128GB Black</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★☆☆</div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box box-4">
+          <div class="product-img-items"></div>
+
+          <h1>1,779.99₾</h1>
+          <h2>Apple iPhone 14 128GB</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box box-5">
+          <div class="product-img-items"></div>
+
+          <h1>1,149.99₾</h1>
+          <h2>Apple iPhone 13 Mini - Blue</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="item-and-items-list samsung-items">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-2">
+        <div class="items-box">
+          <div class="samsung-items-box"></div>
+
+          <h1>Samsung</h1>
+
+          <ul>
+            <li>Samsung Galaxy S25</li>
+            <li>Samsung Galaxy S24</li>
+            <li>Samsung Galaxy S23</li>
+          </ul>
+
+          <a href="#">
+            <span>View All <i class="fa-solid fa-arrow-right"></i></span>
+          </a>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box samsung-box-1">
+          <div class="product-img-items"></div>
+
+          <h1>3,999.99₾</h1>
+          <h2>Samsung S938B Galaxy S25 Ultra 12GB/1TB 5G - Titanium Gray</h2>
+          <p>მობილური ტელეფონი</p>
+          <div class="stars">
+            ★★★★☆
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box samsung-box-2">
+          <div class="product-img-items"></div>
+
+          <h1>1,649.99₾</h1>
+          <h2>Samsung Galaxy S24 S921B 5G 8/128GB</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★★★</div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box samsung-box-3">
+          <div class="product-img-items"></div>
+
+          <h1>2,399.99₾</h1>
+          <h2>Samsung Galaxy S23 5G S911B/DS 8/256GB</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★☆☆</div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box samsung-box-4">
+          <div class="product-img-items"></div>
+
+          <h1>1,779.99₾</h1>
+          <h2>Samsung Galaxy S22 5G S901E/DS 8/128</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="item-and-items-list-box samsung-box-5">
+          <div class="product-img-items"></div>
+
+          <h1>1,279.99₾</h1>
+          <h2>Samsung Galaxy S21 FE 5G 8/128GB Graphite</h2>
+          <p>მობილური ტელეფონი</p>
+
+          <div class="stars">★★★★☆</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="items-types-three">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="items-type-three-box first">
+          <img src="./images/first-bc.png" alt="">
+          <h1>ტექნიკა</h1>
+          <p>მობილურები,Gaming, კომპიუტერები</p>
+          <a href="#"><span>View All <i class="fa-solid fa-arrow-right"></i></span></a>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="items-type-three-box Second">
+          <img src="./images/second-bc.png" alt="">
+          <h1>გართობა</h1>
+          <p>ყურსასმენები და Gadgets</p>
+          <a href="#"><span>View All <i class="fa-solid fa-arrow-right"></i></span></a>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="items-type-three-box Third">
+          <img src="./images/third-bc.png" alt="">
+          <h1>საკვები</h1>
+          <p>პროდუქტები და სასმელები</p>
+          <a href="#"><span>View All <i class="fa-solid fa-arrow-right"></i></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fun-and-food">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="row">
+          <div class="col-4">
+            <div class="fun-and-food-box fun">
+              <img src="./images/fun-img.jpg" alt="">
+              <h1>გართობა</h1>
+              <ul>
+                <li>კონცერტები</li>
+                <li>კინოთეატრი</li>
+                <li>სპორტი</li>
+                <li>წიგნები</li>
+                <li>Gaming</li>
+              </ul>
+
+              <a href="#">
+                <span>
+                  View All
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+
+            </div>
+          </div>
+
+          <div class="col-8">
+            <div class="fun-list">
+              <div class="row">
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/FC26.webp" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>149.00₾</h3>
+                      <h2>FC 26</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/RDR2.webp" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>99.00₾</h3>
+                      <h2>RDR2 </h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/book.jpg" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>16.95₾</h3>
+                      <h2>გარეული ცხოველები</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/telescope.jpg" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>129.46₾</h3>
+                      <h2>ტელესკოპი</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/headphone.webp" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>179.00₾</h3>
+                      <h2>Razer Gaming Headset</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/gamingchair.webp" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>399.00₾</h3>
+                      <h2>Gaming Chair</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="row align-items-stretch">
+          <div class="col-4">
+            <div class="fun-and-food-box food">
+              <img src="./images/food.jpg" alt="">
+              <h1>საკვები</h1>
+              <ul>
+                <li>პიცა</li>
+                <li>ბურგერი</li>
+                <li>დესერტი</li>
+                <li>სუში</li>
+                <li>სასმელები</li>
+              </ul>
+              <a href="#">
+                <span>
+                  View All
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="col-8">
+            <div class="fun-list">
+              <div class="row">
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/cocacola.avif" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>1.85₾</h3>
+                      <h2>კოკა კოლა 0.33ლ</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/borjomi.avif" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>2.85₾</h3>
+                      <h2>ბორჯომი 1ლ</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/bannana.avif" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>5.25₾</h3>
+                      <h2>ბანანი</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/cartofili.avif" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>1.40₾</h3>
+                      <h2>კართოფილი 1კგ</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/arajani.avif" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>6.00₾</h3>
+                      <h2>არაჟანი 15%</h2>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="product-card">
+                    <div class="img-side">
+                      <img src="./images/xaxvi.avif" alt="">
+                    </div>
+                    <div class="info-side">
+                      <h3>1.95₾</h3>
+                      <h2>ხახვი</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="site-about">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-6 site-about-img">
+        <img src="./images/sales-img.png" alt="">
+      </div>
+      <div class="col-6 site-about-text">
+        <h1>იპოვე ნებისმიერი პროდუქტი <span style="color:#FFC122">საუკეთესო</span> ფასად</h1>
+        <h3>ერთ სივრცეში მოძებნე პროდუქტები, ათეულობით ონლაინ მაღაზიიდან და შეადარე ფასები წამებში</h3>
+        <h2><span><i class="fa-solid fa-magnifying-glass"></i>მოძებნე ათობით მაღაზიიდან</span></h2>
+        <h2><span><i class="fa-solid fa-piggy-bank"></i>ფასების შედარება ერთ სივრცეში</span></h2>
+        <h2><span><i class="fa-solid fa-magnifying-glass"></i>მოძებნე ათობით მაღაზიიდან</span></h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <div class="footer-logo">
+          <img src="./images/logo.jpg" alt="">
+          <p>შეადარეთ ქართული მაღაზიების ფასები და იპოვეთ საუკეთესო შეთავაზებები ერთ სივრცეში სწრაფად და მარტივად.</p>
+          <div class="footer-social">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="footer-links">
+          <h2>კატეგორიები</h2>
+          <a href="#">ტექნიკა</a>
+          <a href="#">Gaming</a>
+          <a href="#">საკვები</a>
+          <a href="#">გართობა</a>
+          <a href="#">აქსესუარები</a>
+        </div>
+      </div>
+      <div class="col-2">
+        <div class="footer-links">
+          <h2>ინფორმაცია</h2>
+          <a href="#">ჩვენს შესახებ</a>
+          <a href="#">კონტაქტი</a>
+          <a href="#">FAQ</a>
+          <a href="#">წესები</a>
+          <a href="#">Privacy Policy</a>
+        </div>
+      </div>
+
+      <div class="col-4">
+        <div class="footer-text">
+          <h2>მიიღე ახალი შეთავაზებები</h2>
+          <p>გამოიწერე სიახლეები და მიიღე საუკეთესო ფასები პირველმა</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</html> 

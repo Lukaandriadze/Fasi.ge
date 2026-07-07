@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Autosoe</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="/styles/index.css">
+</head>
+<body>
+<div class="container-fluid header">
+    <div class="row">
+      <div class="col-5">
+        <div class="row">
+          <div class="col-6 site-logo">
+            <a href="/" style="border: none;"><img src="./images/logo.jpg"  alt=""></a>
+          </div>
+          <div class="col-6 category">
+
+          </div>
+        </div>
+      </div>
+      <div class="col-4">
+      </div>
+      <div class="col-3">
+        <div class="cart">
+          <div class="row">
+            <div class="col-6 help-center">
+              <div class="row">
+                <div class="col-6 headphone">
+                  <i class="fa-regular fa-headphones"></i>
+                </div>
+                <div class="col-6">
+                  <p>Help Center</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 heart-cart">
+              <div class="row">
+                <div class="col-6 heart"><i class="fa-regular fa-heart"></i></div>
+                <div class="col-6 cart">
+                  <div class="row">
+                    <div class="col-6"><i class="fa-solid fa-cart-arrow-down"></i></div>
+                    <div class="col-6">
+                      <div class="row">
+                        <p>Shopping Cart</p>
+                        <p>$0.00</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+             </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<div class="container-fluid categories">
+    <div class="row">
+      <div class="col-6">
+        <div class="row">
+          <div class="col-2"><p>მთავარი გვერდი</p></div>
+          <div class="col-2"><p>მაღაზიები</p></div>
+          <div class="col-2"><p>კატეგორიები</p></div>
+          <div class="col-2"><p>ბლოგები</p></div>
+          <div class="col-2"><p>პროდუქტები</p></div>
+          <div class="col-2"><p>ტექნიკა</p></div>
+        </div>
+      </div>
+      <div class="col-4"></div>
+      <div class="col-2">
+        <div class="row">
+          <div class="col-6 EUR">
+              <div class="EUR-hover">
+                <div class="EUR-dropdown">
+                  <div class="dropdown">
+                    <button style="background-color: white;color:black;border: none;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EUR
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu">
+                      <li><a class="dropdown-item active" href="#">EUR€</a></li>
+                      <li><a class="dropdown-item" href="#">USD$</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-6 USD">
+              <div class="USD-hover">
+                <div class="USD-dropdown">
+                  <div class="dropdown">
+                    <button style="background-color: white;color:black;border: none;" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      EUR
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu">
+                      <li><a class="dropdown-item active" href="#">ENGLISH</a></li>
+                      <li><a class="dropdown-item" href="#">GEORGIAN</a></li>
+                      <li><a class="dropdown-item" href="#">RUSSIAN</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
+</div>
+<div class="search-bar-with-text">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-5">
+        <h1>შეადარე ფასები.</h1>
+        <h1>იპოვე <span style="color:orange">საუკეთესო</span> შემოთავაზება</h1>
+      </div>
+      <div class="product-search-bar col-4">
+        <div class="search-box">
+          <input id="searchInput" type="text" placeholder="მაგ. iPhone, Samsung, laptop..." autocomplete="off">
+          <button class="search-btn" onclick="searchProducts()">ძებნა <i class="bi bi-search"></i></button>
+        </div>
+      </div>
+      <div class="col-3"></div>
+    </div>
+  </div>
+</div>
+<div class="main-wrapper">
+  <div class="container">
+    <div class="filter-and-result row g-4">
+      <div class="col-lg-3">
+        <div class="filters">
+          <h5><i class="bi bi-funnel-fill"></i> ფილტრები</h5>
+          <div class="filter-group">
+            <h6><i class="bi bi-shop"></i> მაღაზიები</h6>
+            <div id="shopFilterList">
+              <div class="text-muted small">— შეიყვანე პროდუქტი —</div>
+            </div>
+          </div>
+          <div class="filter-group">
+            <h6><i class="bi bi-coin"></i> ფასის დიაპაზონი (₾)</h6>
+            <div class="price-input-group">
+              <input type="number" id="priceMin" class="form-control" placeholder="მინ ₾" step="any">
+              <input type="number" id="priceMax" class="form-control" placeholder="მაქს ₾" step="any">
+            </div>
+            <button class="reset-filter-btn mt-3 w-100" id="resetFiltersBtn"><i class="bi bi-arrow-repeat"></i> Reset filters</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-9">
+        <div class="results-box">        
+          <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+            <div class="div"></div>
+            <select id="sortSelect" class="form-select w-auto" style="max-width:200px;">
+              <option value="price_asc">ფასი:ზრდადობით</option>
+              <option value="price_desc">ფასი:კლებადობით</option>
+            </select>
+          </div>  
+          <div class="result-header">
+            <div>პროდუქტი</div><div>მაღაზია</div><div>ფასი</div><div>მარაგშია</div><div>მიწოდება</div><div>დეტალურად</div>
+          </div>
+          <div id="resultsContainer"></div>
+        </div>
+        <div class="footer-boxes">
+          <div class="info-box"><i class="bi bi-cart-check fs-2" style="color:#5b3df5;"></i><h5>ფასების შედარება</h5><p>ყველა მაღაზიებს შორის</p></div>
+          <div class="info-box"><i class="bi bi-graph-up fs-2" style="color:#5b3df5;"></i><h5>განახლება რეალურ დროში</h5><p>განახლებული მონაცემები</p></div>
+          <div class="info-box"><i class="bi bi-tag fs-2" style="color:#5b3df5;"></i><h5>საუკეთესო შეთავაზებები</h5><p>ყველაზე დაბალ ფასად</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+let allProducts = [];
+let currentFiltered = [];
+
+function parsePriceNumber(priceStr) {
+  if (!priceStr || priceStr === "N/A") return NaN;
+
+  let cleaned = priceStr.replace(/[^\d.-]/g, '');
+
+  if (cleaned === "") return NaN;
+
+  let num = parseFloat(cleaned);
+
+  return isNaN(num) ? NaN : num;
+}
+
+function detectBrand(name){
+  const n = name.toLowerCase();
+
+  if(n.includes("iphone") || n.includes("apple")) return "Apple";
+  if(n.includes("samsung") || n.includes("galaxy")) return "Samsung";
+  if(n.includes("xiaomi") || n.includes("redmi")) return "Xiaomi";
+  if(n.includes("huawei")) return "Huawei";
+  if(n.includes("google pixel")) return "Google";
+
+  return "Unknown";
+}
+
+function detectStorage(name){
+  const n = name.toLowerCase();
+
+  const storageList = [
+    "64gb",
+    "128gb",
+    "256gb",
+    "512gb",
+    "1tb",
+    "2tb"
+  ];
+
+  return storageList.filter(s => n.includes(s));
+}
+
+function detectColors(name){
+  const colors = [
+    "black",
+    "white",
+    "blue",
+    "pink",
+    "green",
+    "silver",
+    "gold",
+    "purple"
+  ];
+
+  return colors.filter(c =>
+    name.toLowerCase().includes(c)
+  );
+}
+
+function calculateDiscount(oldPrice, newPrice){
+  if(!oldPrice || !newPrice) return null;
+
+  const oldP = parsePriceNumber(oldPrice.toString());
+  const newP = parsePriceNumber(newPrice.toString());
+
+  if(isNaN(oldP) || isNaN(newP) || oldP <= newP)
+    return null;
+
+  return Math.round(((oldP - newP) / oldP) * 100);
+}
+
+function escapeHtml(str) {
+  if(!str) return "";
+
+  return str.replace(/[&<>]/g, function(m) {
+    if(m === '&') return '&amp;';
+    if(m === '<') return '&lt;';
+    if(m === '>') return '&gt;';
+    return m;
+  });
+}
+
+function renderProducts(productsArray) {
+  const container =
+    document.getElementById("resultsContainer");
+
+  if (!container) return;
+
+  if (!productsArray.length) {
+    container.innerHTML = `
+      <div class="p-5 text-center text-muted">
+        <i class="bi bi-emoji-frown fs-1"></i><br />
+        No products match your filters.
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = "";
+
+  productsArray.forEach(p => {
+
+    const name = p.name || "No name";
+
+    const brand = detectBrand(name);
+
+    const storage = detectStorage(name);
+
+    const colors = detectColors(name);
+
+    const discount =
+      calculateDiscount(p.oldPrice, p.price);
+
+    const priceValue = p.price || "N/A";
+
+    const shopName = p.shop || "store.ge";
+
+    const productDiv = document.createElement("div");
+
+    productDiv.className = "product-row";
+
+    productDiv.innerHTML = `
+      <div class="product-left">
+        <img
+          src="${p.image || 'https://via.placeholder.com/100'}"
+          alt="product"
+        >
+
+        <div>
+          <div class="product-name">
+            ${escapeHtml(name)}
+          </div>
+
+          <div class="product-brand">
+            ${brand}
+          </div>
+
+          <div>
+            ${storage.map(s =>
+              `<span class="badge-custom">${s.toUpperCase()}</span>`
+            ).join("")}
+
+            ${colors.map(c =>
+              `<span class="badge-custom">${c}</span>`
+            ).join("")}
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <span class="shop">${shopName}</span>
+      </div>
+
+      <div>
+        <div class="price">${priceValue}</div>
+
+        <div class="d-flex align-items-center gap-2 mt-1">
+          <div class="old-price">
+            ${p.oldPrice ? p.oldPrice : ""}
+          </div>
+
+          ${discount
+            ? `<span class="discount-badge">${discount}% OFF</span>`
+            : ""
+          }
+        </div>
+      </div>
+
+      <div class="stock">
+        <i class="bi bi-check-circle-fill"></i>ხელმისაწვდომია
+      </div>
+
+      <div class="shipping">
+        <i class="bi bi-truck"></i>უფასო მიწოდება
+      </div>
+
+      <div>
+        <a href="${p.url || '#'} "target="_blank" class="view-btn">View Deal</a>
+      </div>
+    `;
+
+    container.appendChild(productDiv);
+  });
+}
+
+function populateShopFilters(products) {
+
+  const shopContainer =
+    document.getElementById("shopFilterList");
+
+  if (!shopContainer) return;
+
+  const shopsSet = new Set();
+
+  products.forEach(p => {
+    if(p.shop && typeof p.shop === 'string') {
+      shopsSet.add(p.shop);
+    }
+  });
+
+  const uniqueShops =
+    Array.from(shopsSet).sort();
+
+  if(uniqueShops.length === 0) {
+    shopContainer.innerHTML =
+      `<div>No stores available</div>`;
+    return;
+  }
+
+  let html = "";
+
+  uniqueShops.forEach(shop => {
+
+    html += `
+      <div class="shop-check-item">
+        <input
+          type="checkbox"
+          class="shop-checkbox"
+          value="${escapeHtml(shop)}"
+          id="shop_${escapeHtml(shop)}"
+        >
+
+        <label for="shop_${escapeHtml(shop)}">
+          ${escapeHtml(shop)}
+        </label>
+      </div>
+    `;
+  });
+
+  shopContainer.innerHTML = html;
+
+  document.querySelectorAll('.shop-checkbox')
+    .forEach(cb => {
+      cb.addEventListener(
+        'change',
+        () => applyFiltersAndSort()
+      );
+    });
+}
+
+function applyFiltersAndSort() {
+
+  if (!allProducts.length) {
+    renderProducts([]);
+    return;
+  }
+
+  const checkedShops = Array.from(
+    document.querySelectorAll('.shop-checkbox:checked')
+  ).map(cb => cb.value);
+  let filtered = [...allProducts];
+  filtered = filtered.filter((p) => {
+    const name =
+      (p.name || "").toLowerCase();
+    const bannedWords = [
+      "case",
+      "cover",
+      "charger",
+      "cable",
+      "holder",
+      "protective",
+      "finewoven",
+      "magsafe",
+      "adapter",
+      "airpods",
+      "watch"
+    ];
+
+    return !bannedWords.some(word =>
+      name.includes(word)
+    );
+  });
+  filtered = filtered.filter((p) => {
+    const name =
+      (p.name || "").toLowerCase();
+
+    return (
+      name.includes("iphone") ||
+      name.includes("samsung") ||
+      name.includes("galaxy") ||
+      name.includes("xiaomi") ||
+      name.includes("redmi")
+    );
+  });
+  if (checkedShops.length > 0) {
+    filtered = filtered.filter(p =>
+      checkedShops.includes(p.shop)
+    );
+  }
+  const minVal =
+    document.getElementById("priceMin")?.value;
+
+  const maxVal =
+    document.getElementById("priceMax")?.value;
+
+  const minPrice =
+    minVal !== "" ? parseFloat(minVal) : null;
+
+  const maxPrice =
+    maxVal !== "" ? parseFloat(maxVal) : null;
+
+  if (minPrice !== null || maxPrice !== null) {
+
+    filtered = filtered.filter(p => {
+
+      const priceNum =
+        parsePriceNumber(p.price);
+
+      if (isNaN(priceNum)) return false;
+
+      if (minPrice !== null &&
+          priceNum < minPrice) {
+        return false;
+      }
+
+      if (maxPrice !== null &&
+          priceNum > maxPrice) {
+        return false;
+      }
+
+      return true;
+    });
+  }  const sortValue =
+    document.getElementById("sortSelect")?.value
+    || "price_asc";
+
+  filtered.sort((a,b) => {
+
+    const priceA =
+      parsePriceNumber(a.price);
+
+    const priceB =
+      parsePriceNumber(b.price);
+
+    if (isNaN(priceA)) return 1;
+    if (isNaN(priceB)) return -1;
+
+    if (sortValue === "price_asc") {
+      return priceA - priceB;
+    }
+
+    if (sortValue === "price_desc") {
+      return priceB - priceA;
+    }
+
+    return 0;
+  });
+
+  currentFiltered = filtered;
+
+  renderProducts(currentFiltered);
+}
+
+function resetFilters() {
+
+  document.querySelectorAll('.shop-checkbox')
+    .forEach(cb => cb.checked = false);
+
+  document.getElementById("priceMin").value = "";
+  document.getElementById("priceMax").value = "";
+
+  document.getElementById("sortSelect").value =
+    "price_asc";
+
+  applyFiltersAndSort();
+}
+
+async function searchProducts() {
+
+  const keyword =
+    document.getElementById("searchInput")
+    .value
+    .trim();
+
+  const resultsContainer =
+    document.getElementById("resultsContainer");
+
+  if (!keyword) {
+    alert("Enter product name");
+    return;
+  }
+
+  resultsContainer.innerHTML = `
+    <div class="text-center p-5">
+      <div style="color:orange"class="spinner-border "></div>
+      <br>
+      იძებნება...
+    </div>
+  `;
+
+  try {
+
+    const response = await fetch(
+      `http://localhost:3000/api/products?q=${encodeURIComponent(keyword)}`
+    );
+
+    const data = await response.json();
+
+    allProducts = Array.isArray(data)
+      ? data
+      : [];
+
+    populateShopFilters(allProducts);
+
+    applyFiltersAndSort();
+
+  } catch (err) {
+
+    console.error(err);
+
+    resultsContainer.innerHTML = `
+      <div class="alert alert-danger">
+        Failed to fetch products
+      </div>
+    `;
+  }
+}
+
+function bindGlobalEvents() {
+
+  document.getElementById("sortSelect")
+    .addEventListener(
+      "change",
+      () => applyFiltersAndSort()
+    );
+
+  document.getElementById("priceMin")
+    .addEventListener(
+      "input",
+      () => applyFiltersAndSort()
+    );
+
+  document.getElementById("priceMax")
+    .addEventListener(
+      "input",
+      () => applyFiltersAndSort()
+    );
+
+  document.getElementById("resetFiltersBtn")
+    .addEventListener(
+      "click",
+      () => resetFilters()
+    );
+
+  document.getElementById("searchInput")
+    .addEventListener("keypress", (e) => {
+      if (e.key === "Enter") {
+        searchProducts();
+      }
+    });
+}
+window.addEventListener("DOMContentLoaded", () => {
+  bindGlobalEvents();
+  document.getElementById("resultsContainer")
+    .innerHTML = `
+      <div class="p-5 text-center text-muted">
+      </div>
+    `;
+});
+</script>
+</body>
+</html>
