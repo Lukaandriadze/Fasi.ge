@@ -190,42 +190,10 @@ async function scrapeAlta(page, keyword) {
     console.log("❌ ZOOMMER ERROR:", err.message);
     return [];
   }
-}async function scrapeEE(page, keyword) {
-  try {
-    await page.goto(
-      `https://ee.ge/search/${encodeURIComponent(keyword)}`,
-      { waitUntil: "networkidle" }
-    );
-
-    const products = await page.evaluate(() => {
-      const script = document.querySelector("#__NEXT_DATA__");
-      if (!script) return [];
-
-      const json = JSON.parse(script.textContent);
-
-      return (
-        json?.props?.pageProps?.initialSearchData?.products || []
-      );
-    });
-
-    const formatted = products.map((p) => ({
-      shop: "ee.ge",
-      name: p.name,
-      price: p.price ? p.price + " ₾" : "N/A",
-      image: p.imageUrl,
-      url: p.route ? "https://ee.ge/" + p.route : null,
-    }));
-
-    return cleanProducts(formatted);
-  } catch (err) {
-    console.log("❌ EE ERROR:", err.message);
-    return [];
-  }
 }
 module.exports = {
   scrapeAlta,
   scrapeExtra,
   scrapeKontakt,
   scrapeZoommer,
-  scrapeEE,
 };

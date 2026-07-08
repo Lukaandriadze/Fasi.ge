@@ -7,7 +7,6 @@ const {
   scrapeExtra,
   scrapeKontakt,
   scrapeZoommer,
-  scrapeEE,
 } = require("./scraping");
 const app = express();
 const PORT = 3000;
@@ -59,7 +58,6 @@ app.get("/api/products", async (req, res) => {
       run(scrapeExtra(extraPage, keyword)),
       run(scrapeKontakt(kontaktPage, keyword, context)),
       run(scrapeZoommer(zoommerPage, keyword)),
-      run(scrapeEE(eePage, keyword)),
     ]);
 
     const allProducts = results
